@@ -4,13 +4,11 @@ AppName is a single page interactive application that uses data to draw the user
 ### Functionality & MVPs
 
 In ${App Name}, users will be able to: 
-- [ ] Interact with data on a visual graph
-- [ ] Select different data to be presented
-- [ ] Select how the data is represented
-- [ ] d
+- [ ] Interact with different css animations
+- [ ] Interact with different css transitions
 
 Additionally, this project will include: 
-- [ ] A modal for information about the site's tools and purpose.
+- [ ] A modal for information about the site's purpose and technologies.
 - [ ] Technical skills with frontend transitions, transformations and animations.
 
 ### Wireframes
@@ -18,29 +16,31 @@ Additionally, this project will include:
 ### Architecture & Technologies
 
 This project will be implemented with the following technologies:
-* D3
-* SOME DATASET API 
+* Fetch API
+* CSS Transitions, Transforms and Animations
+* SOME QUOTE API (maybe futurama)
+* SOME SIMPLE DATASET API for Cards (maybe rick & morty)
 
 ### Implementation Timeline
 
 **Day 1:** Initial setup of the application's skeleton, including node modules, webpack configurations and D3 installation. Parse documentations as well as going through any tutorials. Goals for the day:
 * Set up the project skeleton
-* Learn the dataset's API to generate data for D3
-* Learn enough D3 to render some data
-
-**Day 2:** Get more in-depth with D3's library.  Goals for the day:
-* Create an AWESOME UI/UX
-* Be able to render visual data (aka graphs)
-* Add a single interaction to change the visualization of data.
-
-**Day 3:** Parse documentations as well as going through any tutorials. Goals for the day:
 * Learn CSS transitions
 * Learn CSS transforms
 * Learn CSS animations
+* Create Nav Bar
+
+**Day 2:** Get more in-depth with CSS Text animations.  Goals for the day:
+* Create changing text animations for quotes
+* Create text animation introduction box
+
+**Day 3:** Get more in-depth with CSS transitions. Goals for the day:
+* Input fields text transitions
+* Create interactive cards with some simple dataset API
 
 **Day 4:** Style and polish the frontend completely to be professional. Goals for the day:
 * Add finishing touches with transitions/animations
 
 ### Bonus Features
-- [ ] Add CSS animation saying who I am and what this project is.
 - [ ] Weather widget that will change the background theme depending on weather/location
+- [ ] Nav bar trasitions to different colors
