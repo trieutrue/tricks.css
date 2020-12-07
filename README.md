@@ -12,7 +12,7 @@ Additionally, this project will include:
 - [ ] Technical skills with frontend transitions, transformations and animations.
 
 ### Wireframes
-[picture](./src/images/Screen Shot 2020-12-07 at 12.44.31 PM.png)
+![picture](./src/images/Screen&#32;Shot&#32;2020-12-07&#32;at&#32;12.44.31&#32;PM.png)
 ### Architecture & Technologies
 
 This project will be implemented with the following technologies:
