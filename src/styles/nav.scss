@@ -1,0 +1,44 @@
+svg:not(:root).svg-inline--fa {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  padding: 0 30px;
+  background-color: green;
+  color: white;
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+    width: 3%;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  border: 1px red solid;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
