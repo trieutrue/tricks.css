@@ -1,9 +1,9 @@
 ### Background & Overview
-AppName is a single page interactive application that uses data to draw the user's attention to all the awesome frontend skills I have acquired.
+Tricks.css is a single page interactive application that uses cool css tricks to draw the user's attention.
 
 ### Functionality & MVPs
 
-In ${App Name}, users will be able to: 
+In Tricks.css, users will be able to: 
 - [ ] Interact with different css animations
 - [ ] Interact with different css transitions
 
@@ -12,7 +12,8 @@ Additionally, this project will include:
 - [ ] Technical skills with frontend transitions, transformations and animations.
 
 ### Wireframes
-[picture](./src/images/Screen Shot 2020-12-07 at 12.44.31 PM.png)
+![picture](./src/images/Screen&#32;Shot&#32;2020-12-07&#32;at&#32;12.44.31&#32;PM.png)
+
 ### Architecture & Technologies
 
 This project will be implemented with the following technologies:
@@ -23,8 +24,8 @@ This project will be implemented with the following technologies:
 
 ### Implementation Timeline
 
-**Day 1:** Initial setup of the application's skeleton, including node modules, webpack configurations and D3 installation. Parse documentations as well as going through any tutorials. Goals for the day:
-* Set up the project skeleton
+**Day 1:** Initial setup of the application's skeleton, including node modules and webpack configurations. Parse documentations as well as going through any tutorials. Goals for the day:
+* Set up skeleton
 * Learn CSS transitions
 * Learn CSS transforms
 * Learn CSS animations
