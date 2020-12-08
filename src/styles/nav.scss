@@ -20,6 +20,10 @@ svg:not(:root).svg-inline--fa {
     align-items: center;
     height: 60%;
     width: 3%;
+
+    &:after {
+      content: "Tricks.less";
+    }
   }
 
   li {
