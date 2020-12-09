@@ -7,7 +7,14 @@
 	30%, 70% {transform: translateX(5px);}
 }
 
+.typewriter:after{
+  content: ".css";
+  border-right: .1em solid white;
+  letter-spacing: .08em;
+  animation: blink .75s step-end infinite;
+}
+
 @keyframes blink {
   0%, 100% { border-color: transparent;}
-  50% { border-color: violet;}
+  50% { border-color: white;}
 }

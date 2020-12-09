@@ -15,9 +15,11 @@
 <body>
   <header>
     <nav class="main-nav">
-      <h1 class="logo">
+      <div id="logo-container">
         <i class="fab fa-css3-alt"></i>
-      </h1>
+        <h1 class="typewriter" id="logo">Tricks</h1>
+      </div>
+   
       <ul class="links">
         <li class="shake">
           <a href="https://github.com/ttran193/tricks.css" target="_blank">
@@ -34,10 +36,12 @@
             <i class="fab fa-angellist"></i>
           </a>
         </li>
-        <li class="shake">
-          <i class="fas fa-info"></i>
-        </li>
       </ul>
+
+      <button class="shake info-btn">
+        <!-- <i class="fas fa-info"></i> -->
+        <i class="fas fa-info-circle"></i>
+      </button>
     </nav>
 
     <!-- <nav class="side-nav">
@@ -63,6 +67,10 @@
       </ul>
     </nav> -->
   </header>
+
+  <section id="splash">
+
+  </section>
   <script src="./dist/main.js"></script>
 </body>
 
