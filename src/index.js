@@ -31,23 +31,24 @@ const resetSelectedAttribute = () => {
     const btn = btns[i];
     const page = pages[i];
     if(Boolean(btn.attributes["selected"].value)) btn.attributes["selected"].value = ""
-    if(Boolean(page.attributes["selected"].value)) page.attributes["selected"].value = ""
+    if(Boolean(page.attributes["selected"].value)) {
+      page.attributes["selected"].value = ""
+    }
   }
 }
 
 
 const handlePages = e => {
   e.preventDefault();
-  debugger
   const { selected, href } = e.currentTarget.attributes
   if (Boolean(selected.value)) return
 
   debugger
   resetSelectedAttribute()
-  document.getElementById(href.value).attributes["selected"].value = true
+  const page = document.getElementById(href.value)
+  page.attributes["selected"].value = true
+  page.animate({ top: ["100%", 0] }, 600)
   selected.value = true
-  // document.getElementById(e.currentTarget.hash.slice(1))
-  //   .animate({ top: ["100%", 0] }, 600)
 }
 
 //Add event listener to each <a> tag
