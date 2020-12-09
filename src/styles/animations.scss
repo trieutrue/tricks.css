@@ -18,3 +18,15 @@
   0%, 100% { border-color: transparent;}
   50% { border-color: white;}
 }
+
+//when going down (similar to finger swiping)
+@keyframes slide-up {
+  0% { top: 100%; }
+  100% { top: 0; }
+}
+
+//when going back
+@keyframes slide-down {
+  0% { bottom: 100%; }
+  100% { bottom: 0; }
+}

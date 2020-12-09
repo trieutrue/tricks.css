@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
   font-family: 'Inconsolata', monospace;
-  height: 1000px;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -9,9 +9,27 @@ h1 {
   font-weight: 700;
 }
 
+#scroll-container {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+.scroll-page {
+  position: absolute;
+  background-size: 100%;
+  height: 100vh;
+  width: 100vw;
+  
+  &[selected="true"] {
+    z-index: 5;
+  }
+}
+
 #splash {
   background-image: url("../images//background.png");
-  background-size: 100%;
-  background-color: #000036;
-  height: 100vh;
+}
+
+#cards {
+  background-color: violet;
+  border: 1px solid red;
 }
