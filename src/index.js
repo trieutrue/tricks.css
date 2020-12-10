@@ -1,6 +1,3 @@
-import "./styles/reset.scss";
-import "./styles/nav.scss";
-import "./styles/animations.scss";
 import "./styles/index.scss";
 
 const text = "Tricks"
@@ -47,7 +44,17 @@ const handlePages = e => {
   resetSelectedAttribute()
   const page = document.getElementById(href.value)
   page.attributes["selected"].value = true
-  page.animate({ top: ["100%", 0] }, 600)
+  switch (href.value) {
+    case "splash":
+      page.animate({ bottom: ["100%", 0] }, 600)
+      break
+    case "cards":
+      page.animate({ 
+        top: ["100%", 0],
+        height: [0, "100%"]
+    }, 600)
+      break
+  }
   selected.value = true
 }
 

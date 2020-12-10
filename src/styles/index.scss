@@ -1,7 +1,13 @@
+@import './colors.scss';
+@import "./reset.scss";
+@import "./nav.scss";
+@import "./animations.scss";
+
 body {
   box-sizing: border-box;
   font-family: 'Inconsolata', monospace;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 h1 {
@@ -33,7 +39,6 @@ h1 {
   }
 
   &[selected="true"] {
-    height: 100vh;
     z-index: 5;
   }
 }
