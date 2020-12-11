@@ -9,10 +9,8 @@ const resetSelectedAttribute = () => {
   for (let i = 0; i < btns.length; i++) {
     const btn = btns[i];
     const page = pages[i];
-    if (Boolean(btn.attributes["selected"].value)) btn.attributes["selected"].value = ""
-    if (Boolean(page.attributes["selected"].value)) {
-      page.attributes["selected"].value = ""
-    }
+    if (btn.attributes["selected"].value) btn.setAttribute("selected", "")
+    if (page.attributes["selected"].value) page.setAttribute("selected", "")
   }
 }
 
@@ -25,7 +23,7 @@ const handlePages = e => {
   debugger
   resetSelectedAttribute()
   const page = document.getElementById(href.value)
-  page.attributes["selected"].value = true
+  page.setAttribute("selected", true)
   switch (href.value) {
     case "splash":
       page.animate({ bottom: ["100%", 0] }, 600)
