@@ -3,17 +3,25 @@
   white-space: nowrap;
   z-index: 6;
   width: 90%;
-  height: 50%;
+  height: 55%;
   bottom: 10%;
   left: 10%;
   position: absolute;
+  border: 1px solid red;
 
   .card-flip {
+    position: absolute;
     display: inline-block;
     background-color: transparent;
     perspective: 1000px;
     width: 240px;
     height: 336px;
+    top: 44px;
+    animation: hover-down 0.5s forwards;
+
+    &:hover {
+      animation: hover-up 0.5s forwards;
+    }
     
     .card-inner {
       position: relative;

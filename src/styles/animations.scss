@@ -30,3 +30,14 @@
   0% { bottom: 100%; }
   100% { bottom: 0; }
 }
+
+@keyframes hover-up {
+  0% { top: 44px }
+  100% { top: 0 }
+}
+
+
+@keyframes hover-down {
+  0% { top: 0 }
+  100% { top: 44px }
+}

@@ -20,7 +20,6 @@ const handlePages = e => {
   const { selected, href } = e.currentTarget.attributes
   if (Boolean(selected.value)) return
 
-  debugger
   resetSelectedAttribute()
   const page = document.getElementById(href.value)
   page.setAttribute("selected", true)
