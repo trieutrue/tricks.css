@@ -34,7 +34,7 @@ const resetSelectedAttribute = () => {
   }
 }
 
-
+//Event handler
 const handlePages = e => {
   e.preventDefault();
   const { selected, href } = e.currentTarget.attributes
@@ -58,9 +58,26 @@ const handlePages = e => {
   selected.value = true
 }
 
-//Add event listener to each <a> tag
+//Add event listener to each <div> tag
 const scrollLinks = document.getElementById("side-nav").querySelectorAll("div")
 for (let i = 0; i < scrollLinks.length; i++) {
   const element = scrollLinks[i];
   element.addEventListener("click", handlePages)
+}
+
+
+//Add event listener to each card for flip animation
+const toggleTransform = e => {
+  debugger
+  const { firstElementChild } = e.currentTarget
+  if (!firstElementChild.style.transform) {
+    firstElementChild.style.transform = "rotateY(-180deg)"
+  } else {
+    firstElementChild.style.transform = ""
+  }
+}
+const cards = document.getElementsByClassName("card-flip")
+for (let i = 0; i < cards.length; i++) {
+  const card = cards[i];
+  card.addEventListener("click", toggleTransform)
 }
