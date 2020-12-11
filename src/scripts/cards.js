@@ -1,3 +1,22 @@
+//Fetch cards when DOM is loaded
+// document.addEventListener("DOMContentLoaded", (e) => {
+//   fetch("https://api.pokemontcg.io/v1/cards")
+//     .then(res => res.json())
+//     .then(data => {
+//       const { cards } = data
+//       cards.forEach(card => {
+//         const img = document.createElement('img')
+//         debugger
+//         img
+//       })
+//       console.log(data)
+//     })
+
+// })
+
+
+
+
 const toggleTransform = e => {
   debugger
   const { firstElementChild } = e.currentTarget
