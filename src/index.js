@@ -1,4 +1,6 @@
 import "./styles/index.scss";
+import "./scripts/pages";
+import "./scripts/cards";
 
 const text = "Tricks"
 
@@ -13,71 +15,3 @@ const text = "Tricks"
 // document.addEventListener("DOMContentLoaded", () => {
 //   typewriter(text)
 // })
-
-
-
-//Side-Nav click handler
-//Save ref to current section?
-//set current section height animation to 0%
-//set next section height animation to 100
-const resetSelectedAttribute = () => {
-  const btns = document.getElementsByClassName("circle-btn")
-  const pages = document.getElementsByClassName("scroll-page")
-
-  for (let i = 0; i < btns.length; i++) {
-    const btn = btns[i];
-    const page = pages[i];
-    if(Boolean(btn.attributes["selected"].value)) btn.attributes["selected"].value = ""
-    if(Boolean(page.attributes["selected"].value)) {
-      page.attributes["selected"].value = ""
-    }
-  }
-}
-
-//Event handler
-const handlePages = e => {
-  e.preventDefault();
-  const { selected, href } = e.currentTarget.attributes
-  if (Boolean(selected.value)) return
-
-  debugger
-  resetSelectedAttribute()
-  const page = document.getElementById(href.value)
-  page.attributes["selected"].value = true
-  switch (href.value) {
-    case "splash":
-      page.animate({ bottom: ["100%", 0] }, 600)
-      break
-    case "cards":
-      page.animate({ 
-        top: ["100%", 0],
-        height: [0, "100%"]
-    }, 600)
-      break
-  }
-  selected.value = true
-}
-
-//Add event listener to each <div> tag
-const scrollLinks = document.getElementById("side-nav").querySelectorAll("div")
-for (let i = 0; i < scrollLinks.length; i++) {
-  const element = scrollLinks[i];
-  element.addEventListener("click", handlePages)
-}
-
-
-//Add event listener to each card for flip animation
-const toggleTransform = e => {
-  debugger
-  const { firstElementChild } = e.currentTarget
-  if (!firstElementChild.style.transform) {
-    firstElementChild.style.transform = "rotateY(-180deg)"
-  } else {
-    firstElementChild.style.transform = ""
-  }
-}
-const cards = document.getElementsByClassName("card-flip")
-for (let i = 0; i < cards.length; i++) {
-  const card = cards[i];
-  card.addEventListener("click", toggleTransform)
-}
