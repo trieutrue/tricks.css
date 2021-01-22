@@ -21,8 +21,11 @@ svg:not(:root).svg-inline--fa {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60%;
-    width: 3%;
+    width: 2%;
+
+    h1 {
+      margin-left: 6px;
+    }
   }
 
   li {
