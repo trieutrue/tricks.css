@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 
 const toggleTransform = e => {
-  debugger
   const { firstElementChild } = e.currentTarget
   if (!firstElementChild.style.transform) {
     firstElementChild.style.transform = "rotateY(-180deg)"
@@ -45,7 +44,6 @@ const toggleTransform = e => {
 }
 
 const moveCards = e => {
-  debugger
   const order = parseInt(e.currentTarget.dataset["order"]) + 1;
   const cards = document.getElementsByClassName('card-flip');
 
