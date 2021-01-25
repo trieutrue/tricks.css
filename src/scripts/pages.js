@@ -48,13 +48,13 @@ const handlePages = e => {
 }
 
 const handleScroll = e => {
-  const prevPageNumber = parseInt(resetSelectedAttribute(e).dataset.showPage);
+  const prevPage = resetSelectedAttribute(e)
+  const prevPageNumber = parseInt(prevPage.dataset.showPage);
   let nextPage,
       sideNavBtn;
   if (e.deltaY > 0 && prevPageNumber < 3) {
     nextPage = document.querySelector(`[data-show-page="${prevPageNumber + 1 }"]`);
     sideNavBtn = document.querySelector(`[href="${nextPage.attributes.id.value}"`)
-    debugger
     sideNavBtn.setAttribute("selected", true)
     nextPage.setAttribute("selected", true)
     nextPage.animate({
@@ -66,7 +66,6 @@ const handleScroll = e => {
   } else if (e.deltaY < 0 && prevPageNumber > 1) {
     nextPage = document.querySelector(`[data-show-page="${prevPageNumber - 1}"`);
     sideNavBtn = document.querySelector(`[href="${nextPage.attributes.id.value}"`)
-    debugger
     sideNavBtn.setAttribute("selected", true)
     nextPage.setAttribute("selected", true)
     nextPage.animate({ bottom: ["100%", 0] }, 600)
