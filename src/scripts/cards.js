@@ -26,14 +26,6 @@ const createCard = (card, page, idx) => {
   page.append(cardFlip)
 }
 
-//Fetch squirtle cards when DOM is loaded
-document.addEventListener("DOMContentLoaded", (e) => {
-  fetch("https://api.pokemontcg.io/v1/cards?name=squirtle")
-  .then(res => res.json())
-  .then(data => appendCards(data))
-})
-
-
 const toggleTransform = e => {
   const { firstElementChild } = e.currentTarget
   if (!firstElementChild.style.transform) {
@@ -46,7 +38,7 @@ const toggleTransform = e => {
 const moveCards = e => {
   const order = parseInt(e.currentTarget.dataset["order"]) + 1;
   const cards = document.getElementsByClassName('card-flip');
-
+  
   for (let i = order; i < cards.length - 1; i++) {
     const card = cards[i];
     let left = parseInt(card.style.left.slice(0, -2))
@@ -58,3 +50,10 @@ const moveCards = e => {
     }
   }
 }
+
+//Fetch squirtle cards when DOM is loaded
+document.addEventListener("DOMContentLoaded", (e) => {
+  fetch("https://api.pokemontcg.io/v1/cards?name=squirtle")
+  .then(res => res.json())
+  .then(data => appendCards(data))
+})

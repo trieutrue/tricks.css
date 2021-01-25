@@ -3,12 +3,15 @@
 @import "./animations.scss";
 @import "./nav.scss";
 @import "./scroll_menu.scss";
+@import "./splash.scss";
 
 body {
   box-sizing: border-box;
   font-family: 'Inconsolata', monospace;
+  font-family: 'Source Sans Pro', 'Myriad Pro', 'Lucida Grande', Verdana, sans-serif;
   scroll-behavior: smooth;
   height: 100%;
+  color: white;
 }
 
 h1 {
@@ -44,14 +47,12 @@ h1 {
   }
 }
 
-#splash {
-  background-image: url("../images/charmander.jpg");
-}
-
 #cards {
-  background-image: url("../images/squirtle.jpg");
+  background-image: url("../images/starters.png");
+  padding: 10vh 0 10vh 4vh;
 }
 
 #demo-1 {
-  background-image: url("../images/bulbasaur.jpg");
+  background-image: url("../images/squirtle.jpg");
+  padding: 10vh 0 10vh 4vh;
 }
