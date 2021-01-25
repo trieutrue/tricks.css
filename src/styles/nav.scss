@@ -84,3 +84,12 @@
   justify-content: space-between;
   width: 200px;
 }
+
+.enlarge{
+  transition: 0.5s;
+}
+
+.enlarge:hover {
+  transition: 0.5s;
+  transform: translateY(0) scale(2);
+}
