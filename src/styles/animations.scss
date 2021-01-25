@@ -5,8 +5,6 @@
   animation: blink .75s step-end infinite;
 }
 
-
-
 @keyframes shake {
 	0%, 100% {transform: translateX(0);}
 	10%, 50%, 90% {transform: translateX(-5px);}

@@ -97,17 +97,4 @@
     box-shadow: -0.5em 0 0.5em -0.4em white;
     transform: translateX(0.5em);
   }
-
-  .filler {
-    border: none;
-  }
-
-  .title {
-    border: none;
-    border-bottom: 0.25em solid white;
-
-    &:hover {
-      color: inherit;
-    }
-  }
 }
