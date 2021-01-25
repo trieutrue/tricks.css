@@ -1,47 +1,46 @@
-### Background & Overview
-Tricks.css is a single page interactive application that uses cool css tricks to draw the user's attention.
+# Tricks.css
 
-### Functionality & MVPs
+[Tricks.css](https://trieutrue.github.io/tricks.css/) is a Pokemon themed application with interactive CSS demos that shows off DOM manipulations, CSS3 animations, and basic javascript to handle the interaction. This frontend demo shows my skills using only JavaScript, CSS, and HTML5, imitating React's seamless DOM manipulation.
 
-In Tricks.css, users will be able to: 
-- [ ] Interact with different css animations
-- [ ] Interact with different css transitions
-
-Additionally, this project will include: 
-- [ ] A modal for information about the site's purpose and technologies.
-- [ ] Technical skills with frontend transitions, transformations and animations.
-
-### Wireframes
-![picture](./src/images/Screen&#32;Shot&#32;2020-12-07&#32;at&#32;12.44.31&#32;PM.png)
-
-### Architecture & Technologies
-
-This project will be implemented with the following technologies:
-* Fetch API
+![Splash.png](./src/images/tricks.png)
+## Technologies
+* JavaScript
 * CSS Transitions, Transforms and Animations
-* SOME QUOTE API (maybe futurama)
-* SOME SIMPLE DATASET API for Cards (maybe rick & morty)
+* HTML5
+* Fetch API
+* Webpack
+* [Pokémon TCG API](https://pokemontcg.io/) by [Andrew Backes](https://andrewbackes.com/)
 
-### Implementation Timeline
+## Featured Demo
+### Card animations
+When designing Tricks.css, I wanted to use an API to draw data from and was happy to find the Pokémon TCG API that has enabled me to mess around with the JSON data I receive. Although the API has a plethora of data, I am currently using the API as a photo libray to animate cards to flip and slide. This card animation can be used for many things, such as a carosel of articles, or a gallery of photos. In future version, I hope to implement unique interactions with the data to create something fun for all Pokémon card collectors.
+```javascript
+const toggleTransform = e => {
+  const { firstElementChild } = e.currentTarget
+  if (!firstElementChild.style.transform) {
+    firstElementChild.style.transform = "rotateY(-180deg)"
+  } else {
+    firstElementChild.style.transform = ""
+  }
+}
 
-**Day 1:** Initial setup of the application's skeleton, including node modules and webpack configurations. Parse documentations as well as going through any tutorials. Goals for the day:
-* Set up skeleton
-* Learn CSS transitions
-* Learn CSS transforms
-* Learn CSS animations
-* Create Nav Bar
 
-**Day 2:** Get more in-depth with CSS Text animations.  Goals for the day:
-* Create changing text animations for quotes
-* Create text animation introduction box
+const moveCards = e => {
+  const order = parseInt(e.currentTarget.dataset["order"]) + 1;
+  const cards = document.getElementsByClassName('card-flip');
 
-**Day 3:** Get more in-depth with CSS transitions. Goals for the day:
-* Input fields text transitions
-* Create interactive cards with some simple dataset API
-
-**Day 4:** Style and polish the frontend completely to be professional. Goals for the day:
-* Add finishing touches with transitions/animations
-
-### Bonus Features
-- [ ] Weather widget that will change the background theme depending on weather/location
-- [ ] Nav bar trasitions to different colors
+  for (let i = order; i < cards.length - 1; i++) {
+    const card = cards[i];
+    let left = parseInt(card.style.left.slice(0, -2))
+    if (e.type === "mouseout") {
+      card.animate({ left: [`${left}px`, `${left-100}px`], easing: "ease-in-out"})
+    }
+    if (e.type === "mouseover") {
+      card.animate({ left: [`${left}px`, `${left + 100}px`], easing: "ease-in-out" })
+    }
+  }
+}
+```
+## Wireframes
+![wireframe1.png](./src/images/wireframe1.png)
+![wireframe2.png](./src/images/wireframe2.png)
