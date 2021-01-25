@@ -1,0 +1,51 @@
+#splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../images/charmander.jpg");
+  padding: 10vh 50vw 10vh 8vh;
+}
+
+.slogan {
+  padding: 10vh 0;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  
+  h1 {
+    font-size: 4.5vw;
+    opacity: 0;
+    animation: fade 1s ease forwards;
+  }
+  
+  h4 {
+    font-size: 1.5vw;
+    opacity: 0;
+    animation: fade 1s 1s ease forwards;
+  }
+}
+
+#quotes {
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  opacity: 0;
+  animation: fade 1s 2s ease forwards;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3.5vw;
+}
+
+.attribute {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 0.25em;
+}

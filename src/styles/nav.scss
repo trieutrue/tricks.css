@@ -19,10 +19,17 @@ svg:not(:root).svg-inline--fa {
 
   #logo-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 60%;
-    width: 3%;
+    width: 24%;
+
+    h1 {
+      margin-left: 6px;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 10%;
+    }
   }
 
   li {

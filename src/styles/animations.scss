@@ -1,10 +1,5 @@
 .shake:hover {
-  animation: shake 0.5s ease;
-}
-@keyframes shake {
-	0%, 100% {transform: translateX(0);}
-	10%, 50%, 90% {transform: translateX(-5px);}
-	30%, 70% {transform: translateX(5px);}
+  animation: shake 0.5s ease infinite;
 }
 
 .typewriter:after{
@@ -12,6 +7,14 @@
   border-right: .1em solid white;
   letter-spacing: .08em;
   animation: blink .75s step-end infinite;
+}
+
+
+
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 50%, 90% {transform: translateX(-5px);}
+	30%, 70% {transform: translateX(5px);}
 }
 
 @keyframes blink {
@@ -32,12 +35,34 @@
 }
 
 @keyframes hover-up {
-  0% { top: 44px }
-  100% { top: 0 }
+  0% { 
+    top: 44px; 
+  }
+  100% {
+     top: 0 
+  }
 }
 
-
 @keyframes hover-down {
-  0% { top: 0 }
-  100% { top: 44px }
+  0% { 
+    top: 0 
+  }
+  100% { 
+    top: 44px 
+  }
+}
+
+@keyframes fade {
+  0% {
+    top: 20px;
+    opacity: 0;
+  }
+  66% { 
+    opacity: 1; 
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }

@@ -5,43 +5,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <meta property="og:title" content="Tricks.css" />
+  <meta property="og:image" content="http://trieutrue.github.io/tricks.css/src/images/tricks.png" />
+  <meta property="og:description" content="Tricks.css is a Pokemon themed application with interactive CSS demos that shows off DOM manipulations, CSS3 animations, and basic javascript to handle the interaction. This frontend demo using only JavaScript, CSS, and HTML5." />
+  <meta property="og:url" content="https://raw.githubusercontent.com/trieutrue/tricks.css/master/src/images/tricks.png/" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,900;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/main.css" />
   <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg></script>
-  <title>Tricks.css</title>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <title>PokeTricks.css</title>
 </head>
 
 <body>
   <header>
     <nav class="main-nav">
       <div id="logo-container">
-        <i class="fab fa-css3-alt"></i>
+        <img src="./src/images/pokeball.png" alt="pokeball">
         <h1 class="typewriter" id="logo">Tricks</h1>
       </div>
    
       <ul class="links">
         <li class="shake">
-          <a href="https://github.com/ttran193/tricks.css" target="_blank">
+          <a href="https://github.com/trieutrue/tricks.css" target="_blank">
             <i class="fab fa-github"></i>
           </a>
         </li>
         <li class="shake">
-          <a href="https://www.linkedin.com/in/trieu-tran-52339a167/" target="_blank">
+          <a href="https://www.linkedin.com/in/trieutrue/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </li>
         <li class="shake">
-          <a href="" target="_blank">
+          <a href="https://angel.co/u/trieutran" target="_blank">
             <i class="fab fa-angellist"></i>
           </a>
         </li>
       </ul>
-
-      <button class="shake info-btn">
-        <!-- <i class="fas fa-info"></i> -->
-        <i class="fas fa-info-circle"></i>
-      </button>
     </nav>
 
     <nav id="side-nav">
@@ -52,25 +59,73 @@
         <li>
           <div class="circle-btn" href="cards" selected></div>
         </li>
-        <!-- <li>
+        <li>
           <div class="circle-btn" href="demo-1" selected></div>
-        </li> -->
+        </li>
       </ul>
     </nav>
   </header>
 
   <div id="scroll-container">
-    <section class="scroll-page" id="splash" selected=true>
-  
+    <section class="scroll-page" data-show-page=1 id="splash" selected=true>
+      <div class="slogan">
+        <h1>Making things move</h1>
+        <h4>When you are a front-end developer</h4>
+      </div>
+
+      <div id="quotes">
+        <div class="quote" style="display: block;">
+          <p class="text">
+            <span>Pika, pika chu.</span>
+          </p>
+          <p class="attribute">
+            <span>Pikachu</span>
+            <span>Pokémon</span>
+          </p>
+        </div>
+
+        <div class="quote" style="display: none;">
+          <p class="text">
+            <span>Jiggly puff puff.</span>
+          </p>
+          <p class="attribute">
+            <span>Jigglypuff</span>
+            <span>Pokémon</span>
+          </p>
+        </div>
+
+        <div class="quote" style="display: none;">
+          <p class="text">
+            <span>Me give up?</span>
+            <span>No way!</span>
+          </p>
+          <p class="attribute">
+            <span>Ash Ketchum</span>
+            <span>Pokémon</span>
+          </p>
+        </div>
+
+        <div class="quote" style="display: none;">
+          <p class="text">
+            <span>Team Rocket</span>
+            <span>blasting off at</span>
+            <span>the speed of light.</span>
+          </p>
+          <p class="attribute">
+            <span>Team Rocket</span>
+            <span>Pokémon</span>
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section class="scroll-page"  id="cards" selected>
+    <section class="scroll-page"  data-show-page=2 id="cards" selected>
       <div class="scroll-menu"></div>
     </section>
 
-    <!-- <section class="scroll-page" id="demo-1" selected>
+    <section class="scroll-page" data-show-page=3 id="demo-1" selected>
 
-    </section> -->
+    </section>
   </div>
   <script src="./dist/main.js"></script>
 </body>

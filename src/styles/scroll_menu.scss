@@ -16,10 +16,10 @@
     width: 240px;
     height: 336px;
     top: 44px;
-    animation: hover-down 0.5s forwards;
+    animation: hover-down 0.5s forwards ease-in-out;
 
     &:hover {
-      animation: hover-up 0.5s forwards;
+      animation: hover-up 0.5s forwards ease-in-out;
     }
     
     .card-inner {

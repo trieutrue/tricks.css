@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 
 const toggleTransform = e => {
-  debugger
   const { firstElementChild } = e.currentTarget
   if (!firstElementChild.style.transform) {
     firstElementChild.style.transform = "rotateY(-180deg)"
@@ -45,7 +44,6 @@ const toggleTransform = e => {
 }
 
 const moveCards = e => {
-  debugger
   const order = parseInt(e.currentTarget.dataset["order"]) + 1;
   const cards = document.getElementsByClassName('card-flip');
 
@@ -53,13 +51,10 @@ const moveCards = e => {
     const card = cards[i];
     let left = parseInt(card.style.left.slice(0, -2))
     if (e.type === "mouseout") {
-      card.animate({ left: [`${left}px`, `${left-100}px`] })
-      left -= 100
+      card.animate({ left: [`${left}px`, `${left-100}px`], easing: "ease-in-out"})
     }
     if (e.type === "mouseover") {
-      card.animate({ left: [`${left}px`, `${left + 100}px`] })
-      left += 100
+      card.animate({ left: [`${left}px`, `${left + 100}px`], easing: "ease-in-out" })
     }
-    card.style.left = `${left}px`
   }
 }
