@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <title>PokeTricks.css</title>
+  <title>Tricks.css</title>
 </head>
 
 <body>
@@ -60,7 +60,7 @@
           <div class="circle-btn" href="cards" selected></div>
         </li>
         <li>
-          <div class="circle-btn" href="demo-1" selected></div>
+          <div class="circle-btn" href="buttons" selected></div>
         </li>
       </ul>
     </nav>
@@ -74,43 +74,32 @@
       </div>
 
       <div id="quotes">
-        <div class="quote" style="display: block;">
-          <p class="text">
-            <span>Pika, pika chu.</span>
-          </p>
+        <div class="quote">
+          <p class="text">Pika, pika chu.</p>
           <p class="attribute">
             <span>Pikachu</span>
             <span>Pokémon</span>
           </p>
         </div>
 
-        <div class="quote" style="display: none;">
-          <p class="text">
-            <span>Jiggly puff puff.</span>
-          </p>
+        <div class="quote">
+          <p class="text">Jiggly puff puff.</p>
           <p class="attribute">
             <span>Jigglypuff</span>
             <span>Pokémon</span>
           </p>
         </div>
 
-        <div class="quote" style="display: none;">
-          <p class="text">
-            <span>Me give up?</span>
-            <span>No way!</span>
-          </p>
+        <div class="quote">
+          <p class="text">Me give up?<br />No way!</p>
           <p class="attribute">
             <span>Ash Ketchum</span>
             <span>Pokémon</span>
           </p>
         </div>
 
-        <div class="quote" style="display: none;">
-          <p class="text">
-            <span>Team Rocket</span>
-            <span>blasting off at</span>
-            <span>the speed of light.</span>
-          </p>
+        <div class="quote">
+          <p class="text">Team Rocket<br />blasting off at the<br /> speed of light.</p>
           <p class="attribute">
             <span>Team Rocket</span>
             <span>Pokémon</span>
@@ -120,11 +109,35 @@
     </section>
 
     <section class="scroll-page"  data-show-page=2 id="cards" selected>
-      <div class="scroll-menu"></div>
+      <div class="scroll-menu">
+        <h3>Card Carousel</h3>
+      </div>
     </section>
 
-    <section class="scroll-page" data-show-page=3 id="demo-1" selected>
-
+    <section class="scroll-page" data-show-page=3 id="buttons" selected>
+      <div>
+        <h3>Hoverable Buttons</h3>
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </div>
+      <div></div>
+      <div>
+        <h3>Clickable Buttons</h3>
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </div>
     </section>
   </div>
   <script src="./dist/main.js"></script>

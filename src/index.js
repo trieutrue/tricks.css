@@ -1,6 +1,7 @@
 import "./styles/index.scss";
 import "./scripts/pages";
 import "./scripts/cards";
+import "./scripts/fader";
 
 const text = "Tricks"
 
