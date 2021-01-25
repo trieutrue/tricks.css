@@ -13,20 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const fadeInQuote = quoteNumber => {
     const quote = QUOTES[quoteNumber]
-    quote.animate({opacity: [0, "100%"]}, 1000)
-    setTimeout(quote.style.display = "block", 2000)
+    quote.animate({ opacity: [0, "100%", "100%"], top: ["20px", 0] }, 2500)
+    setTimeout(() => quote.style.display = "block", 0)
   }
 
   const fadeOutQuote = quoteNumber => {
     const quote = QUOTES[quoteNumber]
-    quote.animate({ opacity: ["100%", 0]}, 1000)
-    setTimeout(quote.style.display = "none", 2000)
+    quote.animate({ opacity: ["100%", "100%", 0], top: ["20px", 0] }, 2500)
+    setTimeout(() => quote.style.display = "none", 0)
   }
 
   const switchToNextQuote = nextQuoteNumber => {
     const old = active
     
-    fadeInQuote(nextQuoteNumber);
+    fadeInQuote(nextQuoteNumber)
     fadeOutQuote(old);
     
     active = nextQuoteNumber
