@@ -48,6 +48,8 @@ const handlePages = e => {
 }
 
 const handleScroll = e => {
+  debugger
+  if (e.deltaX) return
   const prevPage = resetSelectedAttribute(e)
   const prevPageNumber = parseInt(prevPage.dataset.showPage);
   let nextPage,
