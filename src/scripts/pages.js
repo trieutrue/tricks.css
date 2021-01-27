@@ -1,3 +1,4 @@
+const debounce = require('lodash.debounce');
 //Side-Nav click handler
 //Save ref to current section?
 //set current section height animation to 0%
@@ -18,6 +19,8 @@ const resetSelectedAttribute = (e) => {
         
       if (btn.attributes["selected"].value) btn.setAttribute("selected", "")
       page.setAttribute("selected", "")
+      page.style.zIndex = "2"
+      setTimeout(() => page.style.zIndex = "1", 500)
     }
   }
 
@@ -33,6 +36,7 @@ const handlePages = e => {
   const prevPageNumber = parseInt(resetSelectedAttribute().dataset.showPage)
   const page = document.getElementById(href.value)
   page.setAttribute("selected", true)
+  page.style.zIndex = "5"
   if (prevPageNumber > parseInt(page.dataset.showPage)) {
     page.animate({ bottom: ["100%", 0] }, 600)
     selected.value = true
@@ -49,7 +53,7 @@ const handlePages = e => {
 
 const handleScroll = e => {
   debugger
-  if (e.deltaX) return
+  if (e.deltaX && !e.deltaY) return
   const prevPage = resetSelectedAttribute(e)
   const prevPageNumber = parseInt(prevPage.dataset.showPage);
   let nextPage,
@@ -59,6 +63,7 @@ const handleScroll = e => {
     sideNavBtn = document.querySelector(`[href="${nextPage.attributes.id.value}"`)
     sideNavBtn.setAttribute("selected", true)
     nextPage.setAttribute("selected", true)
+    nextPage.style.zIndex = "5"
     nextPage.animate({
       top: ["100%", 0],
       height: [0, "100%"]
@@ -70,6 +75,7 @@ const handleScroll = e => {
     sideNavBtn = document.querySelector(`[href="${nextPage.attributes.id.value}"`)
     sideNavBtn.setAttribute("selected", true)
     nextPage.setAttribute("selected", true)
+    nextPage.style.zIndex = "5"
     nextPage.animate({ bottom: ["100%", 0] }, 600)
   }
 }
@@ -82,4 +88,4 @@ for (let i = 0; i < scrollLinks.length; i++) {
 }
 
 // Add event listner to scroll
-document.addEventListener("wheel", handleScroll)
+document.addEventListener("wheel", debounce(handleScroll, 500, {leading: true, maxWait: 2000, trailing: false }));

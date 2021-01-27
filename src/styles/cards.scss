@@ -3,11 +3,12 @@
   padding: 10vh 0 10vh 4vh;
   
   .scroll-menu {
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
     z-index: 6;
     width: 90%;
-    height: 55%;
+    height: 60%;
     bottom: 10%;
     left: 10%;
     position: absolute;
