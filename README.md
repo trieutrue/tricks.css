@@ -1,6 +1,6 @@
 # Tricks.css
 
-[Tricks.css](https://trieutrue.github.io/tricks.css/) is a Pokemon themed application with interactive CSS demos that shows off DOM manipulations, CSS3 animations, and basic javascript to handle the interaction. This frontend demo shows my skills using only JavaScript, CSS, and HTML5, imitating React's seamless DOM manipulation.
+[Tricks.css](https://trieutrue.github.io/tricks.css/) is a Pokemon themed application with interactive CSS demos that shows off DOM manipulations, CSS3 animations, and basic JavaScript to handle the interaction. This frontend demo shows my skills using only JavaScript, CSS, and HTML5, imitating React's seamless DOM manipulation.
 
 ![Splash.png](./src/images/tricks.png)
 ## Technologies
